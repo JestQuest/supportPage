@@ -5,12 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JestQuest Support</title>
 <style>
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
     body {
         font-family: 'Arial', sans-serif;
-        background-color: #f9f9f9;
+        background-color: #FFF8E7; /* Light background for better readability */
         color: #333;
         margin: 0;
         padding: 0;
+        animation: fadeIn 1s ease-in-out;
     }
     .container {
         max-width: 800px;
@@ -18,13 +23,18 @@
         padding: 20px;
     }
     header {
-        background-color: #FFD700;
+        background: linear-gradient(45deg, #FF6B6B, #FFD93D, #32B5FF); /* Colorful gradient to match the app logo */
         color: white;
         padding: 20px 0;
         text-align: center;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        animation: fadeIn 2s ease-in-out;
     }
     header h1 {
         margin: 0;
+        font-size: 2.5rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     }
     .support-content {
         background-color: white;
@@ -32,21 +42,32 @@
         padding: 20px;
         margin-top: 20px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: transform 0.2s ease-in-out;
+    }
+    .support-content:hover {
+        transform: scale(1.02);
     }
     .support-content h2 {
         color: #333;
+        font-size: 1.8rem;
+    }
+    .support-content p {
+        font-size: 1rem;
+        line-height: 1.6;
     }
     .email-link {
         display: inline-block;
-        background-color: #4CAF50;
+        background-color: #FFD93D; /* Bright button to stand out */
         color: white;
         padding: 10px 20px;
         border-radius: 5px;
         text-decoration: none;
         margin-top: 20px;
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        transition: background-color 0.3s ease-in-out;
     }
     .email-link:hover {
-        background-color: #45a049;
+        background-color: #FFB72B;
     }
     footer {
         text-align: center;
@@ -55,26 +76,30 @@
         color: white;
         margin-top: 40px;
     }
+    footer p {
+        margin: 0;
+        padding: 0;
+    }
 </style>
 </head>
 <body>
 <header>
     <div class="container">
-        <h1>Welcome to JestQuest Support</h1>
+        <h1>Welcome to JestQuest Support 🚀</h1>
     </div>
 </header>
 <main>
     <div class="container">
         <div class="support-content">
-            <h2>Need help? Got a question? Just want to say hi?</h2>
-            <p>We love to hear from our players! If you need support, have feedback, or just want to share your latest high score, drop us a line.</p>
-            <a href="mailto:contact.jestquest@gmail.com" class="email-link">Send an Email</a>
+            <h2>Need help? 🤔</h2>
+            <p>We love to hear from our players! Whether you need support, have feedback, or just want to share a laugh 😂, we're here for you. Drop us a line and let's make your JestQuest experience unforgettable!</p>
+            <a href="mailto:contact.jestquest@gmail.com" class="email-link">Send an Email 💌</a>
         </div>
     </div>
 </main>
 <footer>
     <div class="container">
-        &copy; 2024 JestQuest. All rights reserved.
+        <p>&copy; 2024 JestQuest. All rights reserved. Made with ❤️ for our players!</p>
     </div>
 </footer>
 </body>
