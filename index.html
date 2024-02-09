@@ -9,18 +9,19 @@
         from { opacity: 0; }
         to { opacity: 1; }
     }
-    body {
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
         font-family: 'Arial', sans-serif;
         background-color: #FFF8E7; /* Light background for better readability */
         color: #333;
-        margin: 0;
-        padding: 0;
         animation: fadeIn 1s ease-in-out;
     }
-    .container {
-        max-width: 800px;
-        margin: auto;
-        padding: 20px;
+    #page-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
     }
     header {
         background: linear-gradient(45deg, #FF6B6B, #FFD93D, #32B5FF); /* Colorful gradient to match the app logo */
@@ -36,11 +37,22 @@
         font-size: 2.5rem;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     }
+    main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center main content vertically */
+    }
+    .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+    }
     .support-content {
         background-color: white;
         border-radius: 8px;
         padding: 20px;
-        margin-top: 20px;
+        margin: 20px auto;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         transition: transform 0.2s ease-in-out;
     }
@@ -74,7 +86,6 @@
         padding: 20px;
         background-color: #333;
         color: white;
-        margin-top: 40px;
     }
     footer p {
         margin: 0;
@@ -83,24 +94,26 @@
 </style>
 </head>
 <body>
-<header>
-    <div class="container">
-        <h1>Welcome to JestQuest Support 🚀</h1>
-    </div>
-</header>
-<main>
-    <div class="container">
-        <div class="support-content">
-            <h2>Need help? 🤔</h2>
-            <p>We love to hear from our players! Whether you need support, have feedback, or just want to share a laugh 😂, we're here for you. Drop us a line and let's make your JestQuest experience unforgettable!</p>
-            <a href="mailto:contact.jestquest@gmail.com" class="email-link">Send an Email 💌</a>
+<div id="page-container">
+    <header>
+        <div class="container">
+            <h1>Welcome to JestQuest Support 🚀</h1>
         </div>
-    </div>
-</main>
-<footer>
-    <div class="container">
-        <p>&copy; 2024 JestQuest. All rights reserved. Made with ❤️ for our players!</p>
-    </div>
-</footer>
+    </header>
+    <main>
+        <div class="container">
+            <div class="support-content">
+                <h2>Need help? 🤔</h2>
+                <p>We love to hear from our players! Whether you need support, have feedback, or just want to share a laugh 😂, we're here for you. Drop us a line and let's make your JestQuest experience unforgettable!</p>
+                <a href="mailto:contact.jestquest@gmail.com" class="email-link">Send an Email 💌</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 JestQuest. All rights reserved. Made with ❤️ for our players!</p>
+        </div>
+    </footer>
+</div>
 </body>
 </html>
